@@ -1,10 +1,14 @@
 import axios from "axios";
 
-const APPOINTMENTS_GET_ALL = "http://localhost:8080/api/appointments";
-const APPOINTMENT_GET_BY_DONOR = "http://localhost:8080/api/appointments/";
-const APPOINTMENT_DELETE = "http://localhost:8080/api/appointments/";
+const APPOINTMENTS_GET_ALL =
+    "https://bloodbank-java.onrender.com/api/appointments";
+const APPOINTMENT_GET_BY_DONOR =
+    "https://bloodbank-java.onrender.com/api/appointments/";
+const APPOINTMENT_DELETE =
+    "https://bloodbank-java.onrender.com/api/appointments/";
 
-const APPOINTMENT_BOOK = "http://localhost:8080/api/appointments/book";
+const APPOINTMENT_BOOK =
+    "https://bloodbank-java.onrender.com/api/appointments/book";
 
 class AppointmentService {
     static getAllAppointments() {
@@ -44,7 +48,7 @@ class AppointmentService {
             .delete(APPOINTMENT_DELETE + id)
             .then((response) => {
                 console.log("Appointment deleted successfully:", response.data);
-                return response.data; 
+                return response.data;
             })
             .catch((error) => {
                 console.error("Error deleting appointment:", error);

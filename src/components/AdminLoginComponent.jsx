@@ -26,7 +26,7 @@ const AdminLoginComponent = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/admin/login",
+        "https://bloodbank-java.onrender.com/api/admin/login",
         credentials
       );
       // Redirect or perform additional actions on successful login
@@ -57,9 +57,9 @@ const AdminLoginComponent = () => {
         />
       </div>
       <div className="flex flex-col justify-center items-center w-full">
-       
-          <span className="text-2xl font-bold mt-5">Admin Login</span>
-     
+
+        <span className="text-2xl font-bold mt-5">Admin Login</span>
+
         {error && <div className="error-message">Error: {error}</div>}
         <form className="flex flex-col mt-4  w-[24rem]  gap-4" onSubmit={handleSubmit}>
           <Input
